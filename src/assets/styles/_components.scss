@@ -2,8 +2,111 @@
 
 .header {
   background-color: $light-color;
+  padding: 0.5em;
+  height: auto;
 }
 
 .logoHeader {
   height: 10em;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.itemMenu {
+  font-family: $font-titleh2;
+  font-size: x-large;
+  color: $text-color;
+}
+
+.menu .itemMenu a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.menu .itemMenu a:hover {
+  color: $darkorange-color;
+}
+
+i {
+  color: $logo-color;
+  margin: 0.2em;
+  font-size: x-large;
+}
+
+.iconI {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.iconU {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.iconFB {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+}
+
+// Footer
+
+.footer {
+  background-color: $dark-color;
+  padding: 0.5em;
+  height: 150px;
+}
+
+.pFooter {
+  color: $light-color;
+  font-family: $font-main;
+}
+
+.footerCol1 i {
+  color: $light-color;
+}
+
+.footerCol1 p {
+  text-align: center;
+}
+
+.footerCol2 p {
+  text-align: end;
+  margin-bottom: 0;
+}
+
+.footerCol4 p {
+  margin-bottom: 0;
+}
+
+.footerCol3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoFooter {
+  width: auto;
+  height: 135px;
+}
+
+.pFooter a {
+  text-decoration: none;
+  color: $light-color;
+}
+
+.pFooter a:hover {
+  color: $darkorange-color;
 }
