@@ -15,7 +15,11 @@ function Header() {
 
       <div className="logo">
         <a href="../pages/Home.js">
-          <img className="logoHeader" src={LogoHeaderRouge} />
+          <img
+            className="logoHeader"
+            src={LogoHeaderRouge}
+            alt="logo du salon de thé Le Caméo"
+          />
         </a>
       </div>
       <div className="menu">

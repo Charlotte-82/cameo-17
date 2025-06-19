@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="row">
-        <div className="col footerCol1">
+        <div className="col footerCol1 text-center">
           <p className="pFooter">
             Suivez l'actualité du salon sur les réseaux !
           </p>
@@ -17,7 +17,11 @@ function Footer() {
           <p className="pFooter">lecameo17@gmail.com</p>
         </div>
         <div className="col footerCol3">
-          <img className="logoFooter" src={LogoRondBeige} />
+          <img
+            className="logoFooter"
+            src={LogoRondBeige}
+            alt="Logo du salon de thé le Caméo"
+          />
         </div>
         <div className="col footerCol4">
           <p className="pFooter">

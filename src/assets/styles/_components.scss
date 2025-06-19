@@ -26,6 +26,10 @@
   font-family: $font-titleh2;
   font-size: x-large;
   color: $text-color;
+  padding-right: 2em;
+  @include tablette {
+    font-size: larger;
+  }
 }
 
 .menu .itemMenu a {
@@ -66,7 +70,8 @@ i {
 .footer {
   background-color: $dark-color;
   padding: 0.5em;
-  height: 150px;
+  height: auto;
+  margin-top: 0;
 }
 
 .pFooter {
@@ -78,8 +83,13 @@ i {
   color: $light-color;
 }
 
-.footerCol1 p {
+.footerCol1 p,
+.footerCol1 i {
   text-align: center;
+  font-size: x-large;
+  @include tablette {
+    font-size: larger;
+  }
 }
 
 .footerCol2 p {
@@ -109,4 +119,23 @@ i {
 
 .pFooter a:hover {
   color: $darkorange-color;
+}
+
+.footerCol5 p {
+  font-size: x-large;
+  text-align: center;
+  margin-right: 2em;
+  @include mobile {
+    display: none;
+  }
+  @include tablette {
+    font-size: larger;
+  }
+}
+
+.footerCol5,
+.footerCol1,
+.footerCol2,
+.footerCol4 {
+  align-content: center;
 }

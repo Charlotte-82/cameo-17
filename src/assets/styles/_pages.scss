@@ -1,17 +1,32 @@
-@mixin desktop {
-  @media (min-width: 1025px) {
-    @content;
-  }
+// Home
+
+.home {
+  margin-bottom: 0;
 }
 
-@mixin tablette {
-  @media (min-width: 768px) and (max-width: 1024px) {
-    @content;
-  }
+.home *:last-child {
+  margin-bottom: 0;
 }
 
-@mixin mobile {
-  @media (max-width: 767px) {
-    @content;
-  }
+.bande1 {
+  background-color: $lightorange-color;
+}
+
+.bande1 h1 {
+  color: $text-color;
+  text-align: center;
+  padding: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+.bande2 {
+  background-color: $darkorange-color;
+  border: solid 2px $text-color;
+}
+
+.bande2 h2 {
+  color: $light-color;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
