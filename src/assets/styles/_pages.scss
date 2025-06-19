@@ -21,7 +21,7 @@
 
 .bande2 {
   background-color: $darkorange-color;
-  border: solid 2px $text-color;
+  border: solid 3px $text-color;
 }
 
 .bande2 h2 {
@@ -29,4 +29,40 @@
   font-weight: 900;
   letter-spacing: 0.1em;
   text-align: center;
+}
+
+.bande3 {
+  background-color: $light-color;
+}
+
+.bande3 h2 {
+  font-weight: 700;
+  color: $text-color;
+  text-align: center;
+}
+
+.bande3 h3 {
+  color: $text-color;
+  letter-spacing: 0.1em;
+}
+
+.cadreDef {
+  border: solid 3px $text-color;
+  width: 90%;
+  display: flex;
+  justify-self: center;
+  background-color: beige;
+}
+
+.sousTitre {
+  opacity: 50%;
+}
+
+.cadreDef p {
+  color: $text-color;
+  line-height: 1.2em;
+}
+
+.bande4 {
+  background-color: $lightorange-color;
 }
