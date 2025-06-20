@@ -47,6 +47,7 @@ function Footer() {
           </p>
         </div>
       </div>
+      <p className="copyright">© Le Caméo - Rochefort - 2025</p>
     </div>
   );
 }

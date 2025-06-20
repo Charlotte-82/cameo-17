@@ -69,7 +69,7 @@ i {
 
 .footer {
   background-color: $dark-color;
-  padding: 0.5em;
+  padding: 0.1em;
   height: auto;
   margin-top: 0;
 }
@@ -138,4 +138,10 @@ i {
 .footerCol2,
 .footerCol4 {
   align-content: center;
+}
+
+.copyright {
+  color: $light-color;
+  font-size: x-small;
+  text-align: center;
 }

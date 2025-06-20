@@ -8,6 +8,8 @@
   margin-bottom: 0;
 }
 
+// home-bande 1
+
 .bande1 {
   background-color: $lightorange-color;
 }
@@ -18,6 +20,8 @@
   padding: 0.5em;
   letter-spacing: 0.1em;
 }
+
+// home-bande 2
 
 .bande2 {
   background-color: $darkorange-color;
@@ -30,6 +34,8 @@
   letter-spacing: 0.1em;
   text-align: center;
 }
+
+// home-bande 3
 
 .bande3 {
   background-color: $light-color;
@@ -46,22 +52,53 @@
   letter-spacing: 0.1em;
 }
 
-.cadreDef {
+.cadreDef1 {
   border: solid 3px $text-color;
+  border-radius: 10px;
   width: 90%;
   display: flex;
   justify-self: center;
-  background-color: beige;
+  background-color: #fff2ee;
 }
 
 .sousTitre {
   opacity: 50%;
 }
 
-.cadreDef p {
+.cadreDef1 p {
   color: $text-color;
   line-height: 1.2em;
 }
+
+.photoCadre1 {
+  width: 100%;
+  object-fit: cover;
+  opacity: 85%;
+}
+
+.photoDef1 {
+  display: flex;
+}
+
+.divArticle h3 {
+  color: $text-color;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.imageArticle1 {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.imageArticle {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+}
+
+// home-bande 4
 
 .bande4 {
   background-color: $lightorange-color;
