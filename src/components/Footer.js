@@ -8,7 +8,20 @@ function Footer() {
           <p className="pFooter">
             Suivez l'actualité du salon sur les réseaux !
           </p>
-          <i className="bi bi-instagram"></i> <i className="bi bi-facebook"></i>
+          <a
+            href="https://www.instagram.com/lecameo.17?fbclid=IwY2xjawLCaUhleHRuA2FlbQIxMABicmlkETE2ZmRad0dnZ285dHRzemtCAR6Z77uwzjzeNdZ4W4t9YOwIbWbvXLZiqyyNEuzDtk-aGLEjFRCosUJlC8Z39Q_aem_e0N8YyCXs1839mt5vmQejg"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-instagram"></i>
+          </a>{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.facebook.com/p/Le-Cam%C3%A9o-61556540673702/"
+          >
+            <i className="bi bi-facebook"></i>
+          </a>
         </div>
         <div className="col footerCol2">
           <p className="pFooter">Le Caméo</p>

@@ -90,16 +90,119 @@
   width: 80%;
   height: auto;
   object-fit: contain;
+  border: solid 2px $text-color;
+  border-radius: 10px;
 }
 
 .imageArticle {
   width: 300px;
   height: auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageArticle a {
+  text-decoration: none;
+  color: $text-color;
+  text-align: center;
+  @include desktop {
+    font-size: x-large;
+  }
+  @include tablette {
+    font-size: small;
+  }
+  @include mobile {
+    font-size: xx-small;
+  }
+}
+
+.imageArticle a:hover {
+  color: $darkorange-color;
 }
 
 // home-bande 4
 
 .bande4 {
   background-color: $lightorange-color;
+}
+
+.bande4 h2 {
+  font-weight: 700;
+  color: $text-color;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.carteGoogle {
+  border: solid 2px $text-color;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carteGoogleDiv {
+  width: 10em;
+  height: 18em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.adresse {
+  color: $dark-color;
+  font-weight: 700;
+  text-decoration: overline, underline;
+  font-size: x-large;
+  text-align: center;
+}
+
+.imageDevanture {
+  border: solid 2px $text-color;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.imageDevantureDiv {
+  width: 10em;
+  height: 18em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.adresseDiv {
+  align-content: center;
+}
+
+.nomClient {
+  color: $text-color;
+  font-size: x-large;
+  text-align: center;
+}
+
+.starRate {
+  display: flex;
+  justify-content: center;
+}
+
+.avisGoogle {
+  color: $dark-color;
+  text-align: center;
+  font-size: medium;
+}
+
+.avis h3 {
+  text-align: center;
+  color: $text-color;
+}
+
+.bi-star-fill {
+  color: $logo-color;
 }
