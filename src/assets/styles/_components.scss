@@ -145,3 +145,43 @@ i {
   font-size: x-small;
   text-align: center;
 }
+
+// Pâtisserie de la semaine
+
+.patSemaine {
+  padding: 2em;
+  padding-top: 0;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+.imagePatSemaineDiv {
+  @include tablette {
+    width: 15em;
+    height: 12em;
+  }
+
+  @include desktop {
+    width: 25em;
+    height: 15em;
+  }
+
+  border: solid 2px $text-color;
+  border-radius: 10px;
+}
+
+.imagePatisserieSemaine {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.titrePatSemaine {
+  color: $text-color;
+  text-align: center;
+  font-size: xx-large;
+  font-family: $font-titleh2;
+}

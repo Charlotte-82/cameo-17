@@ -26,7 +26,7 @@ function Header() {
       </div>
 
       <div className="logo">
-        <a href="../pages/Home.js">
+        <a href="/">
           <img
             className="logoHeader"
             src={LogoHeaderRouge}
