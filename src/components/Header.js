@@ -36,7 +36,7 @@ function Header() {
       </div>
       <div className="menu">
         <p className="itemMenu">
-          <a href="../pages/Program.js">Programme</a>
+          <a href="/agenda">Programme</a>
         </p>
         <p className="itemMenu">
           <a href="../pages/Shop.js">Boutique</a>

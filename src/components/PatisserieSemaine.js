@@ -23,7 +23,6 @@ function PatisserieSemaine() {
 
   const videoUrl = patisserie.extrait_video_ou_image;
 
-  // Fonction pour transformer une URL classique en URL d’embed
   const convertToEmbed = (url) => {
     if (!url) return null;
     const youtubeMatch = url.match(
@@ -53,6 +52,9 @@ function PatisserieSemaine() {
       <div className="col-4 titrePatSemaine">
         <h2>{patisserie.nom_de_la_patisserie}</h2>
         <p className="titrePatSemaine">{patisserie.prix}</p>
+        <p className="titreFilm">{patisserie.titre_du_film}</p>
+        <p className="realFilm">{patisserie.auteur_de_loeuvre}</p>
+        <p className="dateFilm">{patisserie.date_de_sortie_de_loeuvre}</p>
       </div>
       <div className="col-4">
         {embedUrl && (
