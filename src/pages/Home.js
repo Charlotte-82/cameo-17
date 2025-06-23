@@ -4,6 +4,7 @@ import ImageArticle1 from "../assets/images/Lieu/le-cameo-littoral.jpg";
 import ImageArticle2 from "../assets/images/Lieu/le-cameo-sudouest.jpg";
 import Exterieur1 from "../assets/images/Lieu/le-cameo-ext.jpg";
 import PatisserieSemaine from "../components/PatisserieSemaine";
+import News from "../components/News";
 
 function Home() {
   return (
@@ -14,11 +15,12 @@ function Home() {
       </section>
       <section className="bande2">
         <h2>Actualités</h2>
+        <News />
       </section>
       <section className="bande3 py-4">
         <h2>Le Caméo, c'est quoi ?</h2>
         <div className="row mb-4 cadreDef1">
-          <div className="col-7 py-4 px-4">
+          <div className="py-4 px-4 texteDef">
             <h3>La Création du Caméo</h3>
             <p className="sousTitre">Une histoire de passion</p>
             <p>
@@ -54,7 +56,7 @@ function Home() {
               alt="intérieur du salon de thé avec une rangée de siège comme au cinéma"
             />
           </div>
-          <div className="col-7 py-4 px-4">
+          <div className="py-4 px-4 texteDef">
             <h3>Tout le monde est bienvenu</h3>
             <p className="sousTitre">Un lieu accueillant et chaleureux</p>
             <p>
@@ -75,25 +77,33 @@ function Home() {
         <div className="row divArticle">
           <h3>Ils parlent du Caméo...</h3>
           <div className="col-6 imageArticle">
+            <p className="nomJournal">Le littoral</p>
             <img
               src={ImageArticle1}
               className="imageArticle1"
               alt="Mathilde souriante assise dans son salon de thé"
             />
 
-            <a href="https://www.le-littoral.com/actualite-17185-rochefort-le-cameo-quand-le-7e-art-rencontre-l-art-du-the">
+            <a
+              target="_blank"
+              href="https://www.le-littoral.com/actualite-17185-rochefort-le-cameo-quand-le-7e-art-rencontre-l-art-du-the"
+            >
               <p className="lienArticle">
                 Rochefort. Le Caméo : quand le 7e art rencontre l'art du thé{" "}
               </p>
             </a>
           </div>
           <div className="col-6 imageArticle">
+            <p className="nomJournal">Sud-Ouest</p>
             <img
               src={ImageArticle2}
               className="imageArticle1"
               alt="portrait de Mathilde fière debout devant une affiche de cinéma de son salon"
             />
-            <a href="https://www.le-littoral.com/actualite-17185-rochefort-le-cameo-quand-le-7e-art-rencontre-l-art-du-the">
+            <a
+              target="_blank"
+              href="https://www.sudouest.fr/charente-maritime/rochefort/rochefort-avec-son-salon-de-the-elle-partage-sa-passion-pour-le-septieme-art-21114131.php"
+            >
               <p className="lienArticle">
                 Rochefort : avec son salon de thé, elle partage sa passion pour
                 le septième art

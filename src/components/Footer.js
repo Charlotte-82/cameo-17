@@ -3,7 +3,7 @@ import LogoRondBeige from "../assets/images/logos/Logo rond beige.png";
 function Footer() {
   return (
     <div className="footer">
-      <div className="row">
+      <div className="row px-4">
         <div className="col footerCol1 text-center">
           <p className="pFooter">
             Suivez l'actualité du salon sur les réseaux !

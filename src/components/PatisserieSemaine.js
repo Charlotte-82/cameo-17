@@ -38,9 +38,9 @@ function PatisserieSemaine() {
 
   return (
     <div className="row patSemaine">
-      <div className="col-4 patisserie-semaine">
+      <div className="col-4 d-flex patisserie-semaine">
         {patisserie.image_de_la_patisserie?.url && (
-          <div className="imagePatSemaineDiv">
+          <div className="mx-auto imagePatSemaineDiv">
             <img
               src={patisserie.image_de_la_patisserie.url}
               alt={patisserie.nom_de_la_patisserie}
@@ -49,9 +49,11 @@ function PatisserieSemaine() {
           </div>
         )}
       </div>
-      <div className="col-4 titrePatSemaine">
-        <h2>{patisserie.nom_de_la_patisserie}</h2>
-        <p className="titrePatSemaine">{patisserie.prix}</p>
+      <div className="col-4 PatSemaineDiv">
+        <div className="cadrePat">
+          <h2 className="titrePatSemaine">{patisserie.nom_de_la_patisserie}</h2>
+          <p className="titrePatSemaine">{patisserie.prix}</p>
+        </div>
         <p className="titreFilm">{patisserie.titre_du_film}</p>
         <p className="realFilm">{patisserie.auteur_de_loeuvre}</p>
         <p className="dateFilm">{patisserie.date_de_sortie_de_loeuvre}</p>

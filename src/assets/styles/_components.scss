@@ -15,32 +15,6 @@
   justify-content: center;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 2em;
-  margin-right: 2em;
-}
-
-.itemMenu {
-  font-family: $font-titleh2;
-  font-size: x-large;
-  color: $text-color;
-  padding-right: 2em;
-  @include tablette {
-    font-size: larger;
-  }
-}
-
-.menu .itemMenu a {
-  text-decoration: none;
-  color: $text-color;
-}
-
-.menu .itemMenu a:hover {
-  color: $darkorange-color;
-}
-
 i {
   color: $logo-color;
   margin: 0.2em;
@@ -63,6 +37,72 @@ i {
   position: absolute;
   top: 40px;
   left: 5px;
+}
+
+// Navigation
+
+.menu-container {
+  position: relative;
+}
+
+.burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+}
+
+.itemMenu a {
+  text-decoration: none;
+  color: $text-color;
+  font-size: x-large;
+  font-family: $font-titleh2;
+}
+
+/* Responsive */
+@include mobile {
+  .burger {
+    display: block;
+    color: $text-color;
+    justify-self: end;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: $light-color;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .itemMenu {
+    margin: 0.5rem 0;
+  }
+}
+
+.menu .itemMenu a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.menu .itemMenu a:hover {
+  color: $darkorange-color;
 }
 
 // Footer
@@ -124,7 +164,6 @@ i {
 .footerCol5 p {
   font-size: x-large;
   text-align: center;
-  margin-right: 2em;
   @include mobile {
     display: none;
   }
@@ -170,6 +209,7 @@ i {
     height: 15em;
   }
 
+  width: 100%;
   border: solid 2px $text-color;
   border-radius: 10px;
 }
@@ -182,28 +222,128 @@ i {
 
 .titrePatSemaine {
   color: $text-color;
-  text-align: start;
-  font-size: xx-large;
+  text-align: center;
+  font-size: x-large;
+  @include desktop {
+    font-size: xx-large;
+  }
+  @include mobile {
+    font-size: large;
+  }
+  font-weight: 700;
   font-family: $font-titleh2;
+}
+
+.cadrePat {
+  border: dashed 3px $dark-color;
+  border-radius: 12px;
+  background-color: $light-color;
+  padding: 0.1em;
 }
 
 .titreFilm {
   margin: 0;
+  font-size: xx-large;
+  @include tablette {
+    font-size: x-large;
+  }
+  @include mobile {
+    font-size: large;
+  }
   text-align: end;
   font-style: italic;
   color: $text-color;
 }
 
 .realFilm {
+  color: $dark-color;
   font-size: large;
+  @include tablette {
+    font-size: medium;
+  }
+  @include mobile {
+    font-size: small;
+  }
   text-align: end;
   margin: 0;
 }
 
 .dateFilm {
+  color: $dark-color;
   text-align: end;
   font-size: medium;
   margin: 0;
+}
+
+// News
+
+.newsDiv {
+  padding: 1.5em;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.imageNewsDiv {
+  width: 100%;
+  height: auto;
+}
+
+.imageNews {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.texteNews {
+  padding-right: 2em;
+  color: $text-color;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  @include mobile {
+    font-size: smaller;
+  }
+  @include desktop {
+    font-size: x-large;
+    line-height: 2em;
+  }
+  @include tablette {
+    font-size: large;
+    line-height: 1.7em;
+  }
+}
+
+.texteNews h3 {
+  text-align: center;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.boutonReservation {
+  width: 35%;
+  border: solid 2px $lightorange-color;
+  border-radius: 10px;
+  background-color: $dark-color;
+  @include mobile {
+    width: 50%;
+  }
+  @include desktop {
+    margin-top: 2em;
+  }
+}
+
+.boutonReservation a {
+  color: $light-color;
+  text-decoration: none;
+  font-family: $font-titleh2;
+  font-size: x-large;
+  @include mobile {
+    font-size: medium;
+  }
 }
 
 // Calendar

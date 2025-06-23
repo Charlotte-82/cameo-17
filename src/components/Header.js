@@ -1,4 +1,5 @@
 import LogoHeaderRouge from "../assets/images/logos/Logo baseline rouge.png";
+import Navigation from "../components/Navigation";
 
 function Header() {
   return (
@@ -34,7 +35,8 @@ function Header() {
           />
         </a>
       </div>
-      <div className="menu">
+      <Navigation />
+      {/* <div className="menu">
         <p className="itemMenu">
           <a href="/agenda">Programme</a>
         </p>
@@ -47,7 +49,7 @@ function Header() {
         <p className="itemMenu">
           <a href="../pages/Partnership.js">Partenaires</a>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

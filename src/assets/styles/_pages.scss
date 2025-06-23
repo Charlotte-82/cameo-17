@@ -33,6 +33,7 @@
   font-weight: 900;
   letter-spacing: 0.1em;
   text-align: center;
+  padding-top: 0.5em;
 }
 
 // home-bande 3
@@ -68,16 +69,32 @@
 .cadreDef1 p {
   color: $text-color;
   line-height: 1.2em;
+  @include desktop {
+    font-size: x-large;
+  }
+}
+
+.texteDef {
+  width: 60%;
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .photoCadre1 {
   width: 100%;
   object-fit: cover;
   opacity: 85%;
+  @include mobile {
+    display: none;
+  }
 }
 
 .photoDef1 {
   display: flex;
+  @include mobile {
+    display: none;
+  }
 }
 
 .divArticle h3 {
@@ -92,6 +109,12 @@
   object-fit: contain;
   border: solid 2px $text-color;
   border-radius: 10px;
+}
+
+.nomJournal {
+  color: $darkorange-color;
+  font-family: $font-titleh1;
+  font-size: x-large;
 }
 
 .imageArticle {
