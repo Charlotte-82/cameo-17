@@ -71,7 +71,7 @@ i {
 @include mobile {
   .burger {
     display: block;
-    color: $text-color;
+    color: $logo-color;
     justify-self: end;
   }
 
@@ -79,7 +79,7 @@ i {
     display: none;
     flex-direction: column;
     background-color: $light-color;
-    position: absolute;
+
     top: 3rem;
     left: 0;
     right: 0;
@@ -123,6 +123,12 @@ i {
   color: $light-color;
 }
 
+.footerCol1 p {
+  @include mobile {
+    display: none;
+  }
+}
+
 .footerCol1 p,
 .footerCol1 i {
   text-align: center;
@@ -135,10 +141,17 @@ i {
 .footerCol2 p {
   text-align: end;
   margin-bottom: 0;
+  @include mobile {
+    display: none;
+  }
 }
 
 .footerCol4 p {
   margin-bottom: 0;
+  @include mobile {
+    font-size: smaller;
+    text-align: center;
+  }
 }
 
 .footerCol3 {
@@ -159,6 +172,10 @@ i {
 
 .pFooter a:hover {
   color: $darkorange-color;
+}
+
+.footerCol5 {
+  visibility: hidden;
 }
 
 .footerCol5 p {
@@ -188,13 +205,25 @@ i {
 // Pâtisserie de la semaine
 
 .patSemaine {
-  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3em;
   padding-top: 0;
+  gap: 3em;
 
   @include mobile {
     display: flex;
     flex-direction: column;
     align-content: center;
+  }
+}
+
+.PatDivSemaine {
+  width: 80%;
+  @include mobile {
+    width: 80%;
   }
 }
 
@@ -238,31 +267,49 @@ i {
   border: dashed 3px $dark-color;
   border-radius: 12px;
   background-color: $light-color;
-  padding: 0.1em;
+  padding: 1em;
+  @include mobile {
+    margin-top: 1em;
+  }
+}
+
+.videoExtrait {
+  width: 30%;
+
+  @include mobile {
+    width: 80%;
+  }
 }
 
 .titreFilm {
   margin: 0;
   font-size: xx-large;
+  text-align: end;
+  font-style: italic;
+  color: $text-color;
+  @include desktop {
+    margin-top: 1rem;
+  }
   @include tablette {
     font-size: x-large;
   }
   @include mobile {
+    padding-top: 1em;
     font-size: large;
+    text-align: center;
   }
-  text-align: end;
-  font-style: italic;
-  color: $text-color;
 }
 
 .realFilm {
   color: $dark-color;
   font-size: large;
+
   @include tablette {
     font-size: medium;
   }
   @include mobile {
     font-size: small;
+    text-align: center;
   }
   text-align: end;
   margin: 0;
@@ -273,12 +320,18 @@ i {
   text-align: end;
   font-size: medium;
   margin: 0;
+
+  @include mobile {
+    text-align: center;
+  }
 }
 
 // News
 
 .newsDiv {
-  padding: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
   @include mobile {
     display: flex;
     flex-direction: column;
@@ -287,28 +340,42 @@ i {
 }
 
 .imageNewsDiv {
-  width: 100%;
+  width: 50%;
   height: auto;
+  align-content: center;
+  @include mobile {
+    width: 80%;
+  }
 }
 
 .imageNews {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: auto;
+
+  @include desktop {
+    height: 50em;
+  }
 }
 
 .texteNews {
+  width: 50%;
   padding-right: 2em;
+  padding-left: 2em;
   color: $text-color;
   display: inline-block;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
   @include mobile {
     font-size: smaller;
+    width: 80%;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
   }
   @include desktop {
-    font-size: x-large;
+    font-size: xx-large;
     line-height: 2em;
   }
   @include tablette {
@@ -321,9 +388,12 @@ i {
   text-align: center;
   font-weight: 700;
   color: $text-color;
+  font-size: larger;
+  margin-top: 1em;
 }
 
 .boutonReservation {
+  visibility: hidden;
   width: 35%;
   border: solid 2px $lightorange-color;
   border-radius: 10px;
@@ -344,6 +414,10 @@ i {
   @include mobile {
     font-size: medium;
   }
+}
+
+strong {
+  font-family: $font-titleh2;
 }
 
 // Calendar

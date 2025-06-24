@@ -17,13 +17,13 @@ function Menu() {
           <a href="/agenda">Programme</a>
         </p>
         <p className="itemMenu">
-          <a href="/shop">Boutique</a>
+          <a href="/404">Boutique</a>
         </p>
         <p className="itemMenu">
-          <a href="/blog">Blog</a>
+          <a href="/404">Blog</a>
         </p>
         <p className="itemMenu">
-          <a href="/partnership">Partenaires</a>
+          <a href="/404">Partenaires</a>
         </p>
       </div>
     </nav>

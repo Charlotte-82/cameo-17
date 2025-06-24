@@ -39,8 +39,8 @@ function News() {
   console.log("acf.image:", acf.image);
 
   return (
-    <div className="row newsDiv">
-      <div className="col-6 imageNewsDiv">
+    <div className="newsDiv">
+      <div className="imageNewsDiv">
         {acf.image && typeof acf.image === "object" && (
           <img
             className="imageNews"
@@ -49,13 +49,14 @@ function News() {
           />
         )}
       </div>
-      <div className="col-6 texteNews">
+      <div className="texteNews">
         <h3>{title.rendered}</h3>
         {acf.intervenant && (
           <p>
             <strong>Intervenant :</strong> {acf.intervenant}
           </p>
         )}
+        <p style={{ textDecoration: "underline" }}>QUAND ?</p>
         {acf.date && (
           <p>
             <strong>Date :</strong> {acf.date}
@@ -67,6 +68,10 @@ function News() {
             {acf.heure_de_fin || ""}
           </p>
         )}
+        <p style={{ textDecoration: "underline" }}>OÙ ?</p>
+        <p>
+          <strong>{acf.lieu}</strong>
+        </p>
         {acf.description && <p>{acf.description}</p>}
         <button className="boutonReservation">
           <a href="/agenda">Voir l'agenda</a>

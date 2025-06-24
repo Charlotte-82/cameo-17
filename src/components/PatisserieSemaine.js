@@ -37,19 +37,18 @@ function PatisserieSemaine() {
   const embedUrl = convertToEmbed(videoUrl);
 
   return (
-    <div className="row patSemaine">
-      <div className="col-4 d-flex patisserie-semaine">
-        {patisserie.image_de_la_patisserie?.url && (
-          <div className="mx-auto imagePatSemaineDiv">
-            <img
-              src={patisserie.image_de_la_patisserie.url}
-              alt={patisserie.nom_de_la_patisserie}
-              className="imagePatisserieSemaine"
-            />
-          </div>
-        )}
-      </div>
-      <div className="col-4 PatSemaineDiv">
+    <div className="patSemaine">
+      {patisserie.image_de_la_patisserie?.url && (
+        <div className="imagePatSemaineDiv">
+          <img
+            src={patisserie.image_de_la_patisserie.url}
+            alt={patisserie.nom_de_la_patisserie}
+            className="imagePatisserieSemaine"
+          />
+        </div>
+      )}
+
+      <div className="PatSemaineDiv">
         <div className="cadrePat">
           <h2 className="titrePatSemaine">{patisserie.nom_de_la_patisserie}</h2>
           <p className="titrePatSemaine">{patisserie.prix}</p>
@@ -58,7 +57,7 @@ function PatisserieSemaine() {
         <p className="realFilm">{patisserie.auteur_de_loeuvre}</p>
         <p className="dateFilm">{patisserie.date_de_sortie_de_loeuvre}</p>
       </div>
-      <div className="col-4">
+      <div className="videoExtrait">
         {embedUrl && (
           <iframe
             src={embedUrl}

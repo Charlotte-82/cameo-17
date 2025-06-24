@@ -36,20 +36,6 @@ function Header() {
         </a>
       </div>
       <Navigation />
-      {/* <div className="menu">
-        <p className="itemMenu">
-          <a href="/agenda">Programme</a>
-        </p>
-        <p className="itemMenu">
-          <a href="../pages/Shop.js">Boutique</a>
-        </p>
-        <p className="itemMenu">
-          <a href="../pages/Blog.js">Blog</a>
-        </p>
-        <p className="itemMenu">
-          <a href="../pages/Partnership.js">Partenaires</a>
-        </p>
-      </div> */}
     </div>
   );
 }

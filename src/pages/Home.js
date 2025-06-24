@@ -17,30 +17,30 @@ function Home() {
         <h2>Actualités</h2>
         <News />
       </section>
-      <section className="bande3 py-4">
+      <section className="bande3">
         <h2>Le Caméo, c'est quoi ?</h2>
-        <div className="row mb-4 cadreDef1">
-          <div className="py-4 px-4 texteDef">
+        <div className="cadreDef1">
+          <div className="texteDef">
             <h3>La Création du Caméo</h3>
             <p className="sousTitre">Une histoire de passion</p>
-            <p>
+            <p className="texteParaph">
               Au départ, le projet de Mathilde a été de créer un endroit qui lui
               ressemble à tous les niveaux et où elle pourrait exposer sa
               créativité et celles des autres et assouvir son besoin de partage.
             </p>
-            <p>
+            <p className="texteParaph">
               La passion de Mathilde pour le cinéma a toujours été importante et
               elle n’a pas cessé de réfléchir à un rapprochement possible entre
               cette dernière et son métier.
             </p>
-            <p>
+            <p className="texteParaph">
               Depuis maintenant quelques années, des livres de cuisine
               thématique voient le jour et notamment autour du cinéma. L’attrait
               est véritablement présent et rapproche plusieurs générations. Lui
               vient l’idée d’un lieu pour rassembler ces cinéphiles de tout âge.
             </p>
           </div>
-          <div className="col-5 py-4 px-4 photoDef1">
+          <div className="photoDef1">
             <img
               className="photoCadre1"
               src={Interieur1}
@@ -48,23 +48,23 @@ function Home() {
             />
           </div>
         </div>
-        <div className="row mb-4 cadreDef1">
-          <div className="col-5 py-4 px-4 photoDef1">
+        <div className="cadreDef1">
+          <div className="photoDef1">
             <img
               className="photoCadre1"
               src={Interieur2}
               alt="intérieur du salon de thé avec une rangée de siège comme au cinéma"
             />
           </div>
-          <div className="py-4 px-4 texteDef">
+          <div className="texteDef">
             <h3>Tout le monde est bienvenu</h3>
             <p className="sousTitre">Un lieu accueillant et chaleureux</p>
-            <p>
+            <p className="texteParaph">
               Le Caméo est un salon de thé sur la thématique du cinéma. Les
               clients pourront déguster des pâtisseries directement tirées de
               leur univers cinématographique préféré.
             </p>
-            <p>
+            <p className="texteParaph">
               Le concept passe par l’assiette mais également dans l’ambiance et
               la décoration du salon de thé puisque il y a des affiches de
               cinéma ou encore des objets qui font directement référence à
@@ -86,6 +86,7 @@ function Home() {
 
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://www.le-littoral.com/actualite-17185-rochefort-le-cameo-quand-le-7e-art-rencontre-l-art-du-the"
             >
               <p className="lienArticle">
@@ -102,6 +103,7 @@ function Home() {
             />
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://www.sudouest.fr/charente-maritime/rochefort/rochefort-avec-son-salon-de-the-elle-partage-sa-passion-pour-le-septieme-art-21114131.php"
             >
               <p className="lienArticle">
