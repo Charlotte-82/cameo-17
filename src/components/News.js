@@ -84,7 +84,7 @@ function News() {
       </div>
 
       <div className="texteNews">
-        <h3>{title?.rendered}</h3>
+        {acf?.titre && <h3>{acf.titre}</h3>}
 
         {acf?.intervenant && (
           <p>
