@@ -116,19 +116,19 @@ function Home() {
       </section>
       <section className="bande4">
         <h2>Le Caméo, c'est où ?</h2>
-        <div className="row px-4 py-4">
-          <div className="col-4 carteGoogleDiv">
+        <div className="bande4Div">
+          <div className="carteGoogleDiv">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2401.7040519489146!2d-0.9633540990930719!3d45.93499175739425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4801415a4a79b7c1%3A0x9f46aae248ebd2e!2zTGUgQ2Ftw6lv!5e0!3m2!1sfr!2sfr!4v1750432728740!5m2!1sfr!2sfr"
               title="Carte d’emplacement du Caméo"
               className="carteGoogle"
             ></iframe>
           </div>
-          <div className="col-4 adresseDiv">
+          <div className="adresseDiv">
             <p className="adresse">36 avenue LaFayette</p>
             <p className="adresse">17300 Rochefort</p>
           </div>
-          <div className="col-4 imageDevantureDiv">
+          <div className="imageDevantureDiv">
             <img
               src={Exterieur1}
               className="imageDevanture"

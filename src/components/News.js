@@ -36,12 +36,45 @@ function News() {
   if (!actu) return null;
 
   const { title, acf, excerpt } = actu;
-  console.log("acf.image:", acf.image);
+
+  // ✅ Nouvelle fonction pour parser une date JJ/MM/AAAA
+  const parseDate = (str) => {
+    if (!str) return null;
+    const [day, month, year] = str.split("/");
+    return new Date(`${year}-${month}-${day}`);
+  };
+
+  const formatDate = (str) => {
+    const date = parseDate(str);
+    if (!date || isNaN(date)) return str; // fallback si la date est invalide
+    return date.toLocaleDateString("fr-FR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  };
+
+  const renderDate = () => {
+    if (!acf?.date_de_debut) return null;
+
+    const dateDebut = acf.date_de_debut;
+    const dateFin = acf.date_de_fin;
+
+    if (!dateFin || dateDebut === dateFin) {
+      return <p>Le {formatDate(dateDebut)}</p>;
+    }
+
+    return (
+      <p>
+        Du {formatDate(dateDebut)} au {formatDate(dateFin)}
+      </p>
+    );
+  };
 
   return (
     <div className="newsDiv">
       <div className="imageNewsDiv">
-        {acf.image && typeof acf.image === "object" && (
+        {acf?.image && typeof acf.image === "object" && (
           <img
             className="imageNews"
             src={acf.image.url}
@@ -49,34 +82,46 @@ function News() {
           />
         )}
       </div>
+
       <div className="texteNews">
-        <h3>{title.rendered}</h3>
-        {acf.intervenant && (
+        <h3>{title?.rendered}</h3>
+
+        {acf?.intervenant && (
           <p>
             <strong>Intervenant :</strong> {acf.intervenant}
           </p>
         )}
-        <p style={{ textDecoration: "underline" }}>QUAND ?</p>
-        {acf.date && (
-          <p>
-            <strong>Date :</strong> {acf.date}
-          </p>
-        )}
-        {(acf.heure_de_debut || acf.heure_de_fin) && (
-          <p>
-            <strong>Heure :</strong> {acf.heure_de_debut || ""} –{" "}
-            {acf.heure_de_fin || ""}
-          </p>
-        )}
-        <p style={{ textDecoration: "underline" }}>OÙ ?</p>
         <p>
-          <strong>{acf.lieu}</strong>
+          <strong>Date et Heure</strong>
         </p>
-        {acf.description && <p>{acf.description}</p>}
+        {renderDate()}
+
+        {(acf?.heure_de_debut || acf?.heure_de_fin) && (
+          <p>
+            {acf.heure_de_debut || ""} – {acf.heure_de_fin || ""}
+          </p>
+        )}
+        <p>
+          <strong>Lieu</strong>
+        </p>
+        {acf?.lieu && <p className="lieuEvent">{acf.lieu}</p>}
+
+        {acf?.description && (
+          <p className="descriptionParaph">{acf.description}</p>
+        )}
+
+        {acf?.prix && (
+          <p>
+            <strong>Prix : </strong>
+            {acf.prix}
+          </p>
+        )}
+
         <button className="boutonReservation">
           <a href="/agenda">Voir l'agenda</a>
         </button>
       </div>
+
       {excerpt?.rendered && (
         <div className="col-12">
           <p dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />

@@ -175,7 +175,9 @@ i {
 }
 
 .footerCol5 {
-  visibility: hidden;
+  @include mobile {
+    visibility: hidden;
+  }
 }
 
 .footerCol5 p {
@@ -420,7 +422,30 @@ strong {
   font-family: $font-titleh2;
 }
 
+.lieuEvent {
+  width: 70%;
+  justify-self: center;
+  @include tablette {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.descriptionParaph {
+  font-weight: 700;
+  font-size: larger;
+  @include tablette {
+    font-size: large;
+  }
+}
+
 // Calendar
+
+.calendar *:last-child {
+  margin-bottom: 0;
+}
 
 .grilleCalendrier {
   display: grid;

@@ -194,6 +194,24 @@
   padding-top: 1em;
 }
 
+.bande4Div {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  justify-content: center;
+  @include tablette {
+    flex-direction: column;
+    width: 80%;
+    justify-self: center;
+
+    align-items: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
 .carteGoogle {
   border: solid 2px $text-color;
   border-radius: 10px;
@@ -203,11 +221,16 @@
 }
 
 .carteGoogleDiv {
-  width: 10em;
+  width: 30%;
   height: 18em;
   display: flex;
-  justify-content: center;
-  align-content: center;
+
+  @include tablette {
+    width: 80%;
+  }
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .adresse {
@@ -228,15 +251,36 @@
 }
 
 .imageDevantureDiv {
-  width: 10em;
+  width: 30%;
   height: 18em;
   display: flex;
   justify-content: center;
   align-content: center;
+  @include mobile {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  @include tablette {
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 .adresseDiv {
   align-content: center;
+  width: 30%;
+  @include mobile {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  @include tablette {
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 .nomClient {
@@ -271,12 +315,130 @@
 
 // Programme
 
+.program *:last-child {
+  margin-bottom: 0;
+}
+
 .program {
   background-color: $lightorange-color;
 }
 
 .program h1 {
   color: $text-color;
+  border-bottom: solid 3px $dark-color;
+  margin-bottom: 0;
+}
+
+.postProgram {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 3px $dark-color;
+  padding-left: 1em;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.postProgram.light-bg {
+  background-color: $light-color;
+}
+
+.postProgram.orange-bg {
+  background-color: $lightorange-color;
+}
+
+.imageEventDiv {
+  width: 25%;
+  height: 15em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  padding: 0.5em;
+  @include tablette {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.imageEvent {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.noEvent {
+  font-family: $font-titleh1;
+  padding: 1em;
+  text-align: center;
+  color: $text-color;
+}
+
+.infoEvent {
+  padding: 0.5em;
+  width: 20em;
+  font-size: larger;
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.infoEvent p {
+  color: $text-color;
+  font-size: larger;
+  @include mobile {
+    font-size: medium;
+  }
+}
+
+.infoEvent strong {
+  color: $dark-color;
+}
+
+.infoEvent h3 {
+  font-size: xx-large;
+  font-weight: 700;
+  color: $logo-color;
+  @include mobile {
+    font-size: larger;
+  }
+}
+
+.textEventReserv {
+  padding: 1em;
+  font-size: x-large;
+  width: 40%;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+  }
+  @include tablette {
+    width: 50%;
+  }
+}
+
+.textEventReserv p {
+  @include tablette {
+    font-size: medium;
+  }
+  @include mobile {
+    font-size: small;
+    text-align: center;
+  }
+}
+
+.calendarProgram {
+  display: none;
 }
 
 // Page Travaux
