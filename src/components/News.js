@@ -37,7 +37,6 @@ function News() {
 
   const { title, acf, excerpt } = actu;
 
-  // ✅ Nouvelle fonction pour parser une date JJ/MM/AAAA
   const parseDate = (str) => {
     if (!str) return null;
     const [day, month, year] = str.split("/");
@@ -46,7 +45,7 @@ function News() {
 
   const formatDate = (str) => {
     const date = parseDate(str);
-    if (!date || isNaN(date)) return str; // fallback si la date est invalide
+    if (!date || isNaN(date)) return str;
     return date.toLocaleDateString("fr-FR", {
       day: "2-digit",
       month: "2-digit",
