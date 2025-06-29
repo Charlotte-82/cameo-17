@@ -14,7 +14,7 @@ function News() {
           `${baseURL}/wp-json/wp/v2/evenement?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
           `${baseURL}/wp-json/wp/v2/atelier?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
         ];
-
+        console.log(process.env.REACT_APP_API_URL);
         const responses = await Promise.all(
           endpoints.map((url) => axios.get(url).catch(() => []))
         );

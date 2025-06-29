@@ -19,7 +19,7 @@ function PatisserieSemaine() {
         console.error("Erreur chargement pâtisserie", err);
       });
   }, []);
-
+  console.log(process.env.REACT_APP_API_URL);
   if (!patisserie) return <p>Chargement...</p>;
 
   const mediaSourceUrl = patisserie.extrait_video_ou_image;

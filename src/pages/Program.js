@@ -20,7 +20,7 @@ function Program() {
           axios.get(`${baseURL}/wp-json/wp/v2/evenement?per_page=100`),
           axios.get(`${baseURL}/wp-json/wp/v2/atelier?per_page=100`),
         ]);
-
+        console.log(process.env.REACT_APP_API_URL);
         const today = new Date();
         const currentMonth = today.getMonth();
         const currentYear = today.getFullYear();
