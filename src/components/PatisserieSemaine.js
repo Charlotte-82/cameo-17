@@ -47,12 +47,14 @@ function PatisserieSemaine() {
       );
     }
 
-    const videoFileMatch = url.match(/\.(mp4|webm|ogg|mov)$/i);
-    if (videoFileMatch) {
+    const isVideoUrl =
+      typeof url === "string" &&
+      (url.includes("cloudinary.com") || /\.(mp4|webm|ogg|mov)$/i.test(url));
+
+    if (isVideoUrl) {
       return (
         <video controls className="videoDirect">
-          {" "}
-          <source src={url} type={`video/${videoFileMatch[1].toLowerCase()}`} />
+          <source src={url} type="video/mp4" />
           Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
       );
