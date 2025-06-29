@@ -47,8 +47,7 @@ function PatisserieSemaine() {
       );
     }
 
-    const videoFileMatch =
-      url.includes("cloudinary.com") || url.match(/\.(mp4|webm|ogg|mov)$/i);
+    const videoFileMatch = url.match(/\.(mp4|webm|ogg|mov)$/i);
     if (videoFileMatch) {
       return (
         <video controls className="videoDirect">
