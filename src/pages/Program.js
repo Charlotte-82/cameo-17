@@ -5,7 +5,7 @@ import axios from "axios";
 function Program() {
   const [posts, setPosts] = useState([]);
 
-  const baseURL = "http://lecameo17.local/wp-json/wp/v2";
+  const baseURL = process.env.REACT_APP_API_URL;
 
   const parseACFDate = (dateStr) => {
     if (!dateStr) return null;
@@ -17,8 +17,8 @@ function Program() {
     const fetchData = async () => {
       try {
         const [resEvenements, resAteliers] = await Promise.all([
-          axios.get(`${baseURL}/evenement?per_page=100`),
-          axios.get(`${baseURL}/atelier?per_page=100`),
+          axios.get(`${baseURL}/wp-json/wp/v2/evenement?per_page=100`),
+          axios.get(`${baseURL}/wp-json/wp/v2/atelier?per_page=100`),
         ]);
 
         const today = new Date();

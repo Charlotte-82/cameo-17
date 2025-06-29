@@ -3,11 +3,12 @@ import axios from "axios";
 
 function PatisserieSemaine() {
   const [patisserie, setPatisserie] = useState(null);
+  const baseURL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     axios
       .get(
-        "http://lecameo17.local/wp-json/wp/v2/patisserie_semaine?per_page=1&orderby=date&order=desc"
+        `${baseURL}/wp-json/wp/v2/patisserie_semaine?per_page=1&orderby=date&order=desc`
       )
       .then((res) => {
         if (res.data && res.data.length > 0) {

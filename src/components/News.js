@@ -4,15 +4,15 @@ import axios from "axios";
 function News() {
   const [actu, setActu] = useState(null);
 
-  const baseURL = "http://lecameo17.local/wp-json/wp/v2";
+  const baseURL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchActu = async () => {
       try {
         const endpoints = [
-          `${baseURL}/article?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
-          `${baseURL}/evenement?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
-          `${baseURL}/atelier?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
+          `${baseURL}/wp-json/wp/v2/article?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
+          `${baseURL}/wp-json/wp/v2/evenement?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
+          `${baseURL}/wp-json/wp/v2/atelier?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
         ];
 
         const responses = await Promise.all(
