@@ -10,7 +10,7 @@ function News() {
     const fetchActu = async () => {
       try {
         const endpoints = [
-          `${baseURL}/wp-json/wp/v2/article?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
+          // `${baseURL}/wp-json/wp/v2/article?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
           `${baseURL}/wp-json/wp/v2/evenement?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
           `${baseURL}/wp-json/wp/v2/atelier?meta_key=mettre_en_actu&meta_value=1&per_page=1`,
         ];
